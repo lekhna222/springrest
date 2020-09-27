@@ -8,7 +8,7 @@ public class Marks {
 	
 	@Id
 	private int studid;
-	private String exid;
+	private String examid;
 	private String stud_name;
 	private String exam_name;
 	private int sub1;
@@ -18,10 +18,10 @@ public class Marks {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Marks(int studid, String exid, String stud_name, String exam_name, int sub1, int sub2, int sub3) {
+	public Marks(int studid, String examid, String stud_name, String exam_name, int sub1, int sub2, int sub3) {
 		super();
 		this.studid = studid;
-		this.exid = exid;
+		this.examid = examid;
 		this.stud_name = stud_name;
 		this.exam_name = exam_name;
 		this.sub1 = sub1;
@@ -34,11 +34,11 @@ public class Marks {
 	public void setStudid(int studid) {
 		this.studid = studid;
 	}
-	public String getExid() {
-		return exid;
+	public String getExamid() {
+		return examid;
 	}
-	public void setExid(String exid) {
-		this.exid = exid;
+	public void setExamid(String examid) {
+		this.examid = examid;
 	}
 	public String getStud_name() {
 		return stud_name;
@@ -72,9 +72,8 @@ public class Marks {
 	}
 	@Override
 	public String toString() {
-		return "Marks [studid=" + studid + ", exid=" + exid + ", stud_name=" + stud_name + ", exam_name=" + exam_name
-				+ ", sub1=" + sub1 + ", sub2=" + sub2 + ", sub3=" + sub3 + "]";
+		return "Marks [studid=" + studid + ", examid=" + examid + ", stud_name=" + stud_name + ", exam_name="
+				+ exam_name + ", sub1=" + sub1 + ", sub2=" + sub2 + ", sub3=" + sub3 + "]";
 	}
-	
 	
 	}

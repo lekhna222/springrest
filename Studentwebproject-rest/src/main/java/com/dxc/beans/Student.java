@@ -4,14 +4,22 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 public class Student {
 	@Id
 	 private int id;
 	 private String name;
+	 @DateTimeFormat(pattern = "dd-MM-yyyy")
+		@Column(name ="dob")
+		@JsonFormat( pattern = "dd-MM-yyyy", timezone = "Asia/Kolkata")
 	 private Date dob;
 	 private String email;
 	 private String mobile;
